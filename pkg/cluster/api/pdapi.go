@@ -599,7 +599,7 @@ func (pc *PDClient) RecoverStoreLeader(host string, originalCount int, retryOpt 
 		return nil
 	}
 
-	targetCount := originalCount * 2 / 3
+	targetCount := originalCount * 90 / 100
 	// The default leadership transfer timeout for one region is 10s,
 	// so set the default value to about 10s (5*2s=10s).
 	// NOTE: PD may not transfer leader to a newly started store in the future,
